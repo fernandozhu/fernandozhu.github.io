@@ -1,0 +1,23 @@
+@import "color";
+@import "constant";
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: $darkgray;
+    font-family: "Bebas Neue";
+
+    a {
+        display: inline-block;
+        line-height: $navbarHeight;
+        padding: 0 10px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 1.5em;
+
+        &:hover {
+            color: orange;
+        }
+    }
+}
