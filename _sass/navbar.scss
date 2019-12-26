@@ -7,6 +7,7 @@ nav {
     justify-content: flex-end;
     background-color: $darkgray;
     font-family: "Bebas Neue";
+    z-index: 1;
 
     a {
         display: inline-block;
@@ -14,10 +15,24 @@ nav {
         padding: 0 10px;
         color: whitesmoke;
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.6em;
+        z-index: 1;
 
         &:hover {
             color: orange;
         }
     }
 }
+
+@media screen and (min-width: 768px) {
+    nav a {
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
