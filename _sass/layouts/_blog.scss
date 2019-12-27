@@ -1,0 +1,43 @@
+@import "../color";
+@import "../constant";
+
+.posts {
+    height: calc(100% - #{$navbarHeight});
+    font-family: $postBodyFontFamily;
+    font-size: $postBodyFontSize;
+    font-weight: $postBodyFontWeight;
+}
+
+@media screen and (min-width: $desktopMinWidth) {
+    .posts {
+        max-width: $desktopMinWidth;
+        margin: auto;
+    }
+}
+
+.post {
+    .title {
+        font-family: $postTitleFontFamily;
+        font-size: $postTitleFontSize;
+        font-weight: $postTitleFontSize;
+        color: $primaryBlack;
+        text-transform: capitalize;
+        padding: 10px 0;
+    }
+
+    .preview {
+        padding-bottom: 5px;
+    }
+
+    .meta-info {
+        color: $lightGrey;
+        font-size: 15px;
+        font-style: italic;
+        hr {
+            border: 0;
+            height: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+}

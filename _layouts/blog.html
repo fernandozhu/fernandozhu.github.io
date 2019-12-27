@@ -1,5 +1,22 @@
 ---
 layout: default
+title: Blog
+permalink: /blog/
 ---
 
-Blog template
+<div class="posts">
+    {% for post in site.posts %}
+    <div class="post">
+        <div class="title">
+            {{ post.title }}
+        </div>
+        <div class="preview">
+            {{ post.content | strip_html | truncate:300 }}
+        </div>
+        <div class="meta-info">
+            Posted by {{ post.author }} on {{ post.date | date: "%B %e, %Y" }}
+            <hr>
+        </div>
+    </div>
+    {% endfor %}
+</div>
