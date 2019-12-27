@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
 ---
 
 <div class="posts">
-    {% for post in site.posts %}
+
+    {% for post in paginator.posts %}
     <div class="post">
         <a href={{ post.url }} class="title">
             {{ post.title }}
@@ -38,4 +38,21 @@ permalink: /blog/
         </div>
     </div>
     {% endfor %}
+
+    <!-- Pagination -->
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">Previous</a>
+        {% else %}
+        <span>Previous</span>
+        {% endif %}
+
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">Next</a>
+        {% else %}
+        <span>Next</span>
+        {% endif %}
+    </div>
 </div>

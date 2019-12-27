@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: Fernando Zhu
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -33,12 +33,16 @@ github_username:  jekyll
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 sass:
   sass_dir: _sass
   # load_paths:
   #  - _sass
   #  - node_modules
   style: compressed
+
+paginate: 3
+paginate_path:  "/blog/pagination-:num/"
 
 
 # Exclude from processing.

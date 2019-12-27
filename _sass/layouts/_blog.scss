@@ -3,6 +3,11 @@
 
 .posts {
     min-height: calc(100% - #{$navbarHeight});
+    .pagination {
+        font-family: $postBodyFontFamily;
+        text-align: center;
+        padding: 10px 0;
+    }
 }
 
 @media screen and (min-width: $desktopMinWidth) {
