@@ -17,21 +17,47 @@
 
 .post {
     .title {
+        display: inline-block;
         font-family: $postTitleFontFamily;
         font-size: $postTitleFontSize;
-        font-weight: $postTitleFontSize;
-        color: $primaryBlack;
+        font-weight: $postTitleFontWeight;
+        color: $primaryLightBlack;
         text-transform: capitalize;
-        padding: 10px 0;
+        padding: 12px 0;
+        text-decoration: none;
+        &:hover {
+            color: #1f68b3;
+        }
     }
 
     .preview {
         padding-bottom: 5px;
     }
+    
+    .category__tag {
+        display: flex;
+        color: $lightGrey;
+        font-size: 12px;
+        padding-bottom: 10px;
+        .categories, .tags {
+            flex: 1;
+        }
+        span {
+            padding: 5px;
+            border-radius: 5px;
+            color: $primaryWhite;
+        }
+        .category {
+            background-color: #ea9a06;
+        }
+        .tag {
+            background-color: #1e88e5;
+        }
+    }
 
     .meta-info {
         color: $lightGrey;
-        font-size: 15px;
+        font-size: 12px;
         font-style: italic;
         hr {
             border: 0;

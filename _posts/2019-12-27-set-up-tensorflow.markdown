@@ -2,7 +2,9 @@
 layout: post
 title:  "Setup tensorflow with GPU support"
 date:   2019-12-27 08:18:33 +1300
-categories: learning-notes 
+author: Fernando
+categories: machine-learning 
+tags: learning-notes
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
