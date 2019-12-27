@@ -2,10 +2,7 @@
 @import "../constant";
 
 .posts {
-    height: calc(100% - #{$navbarHeight});
-    font-family: $postBodyFontFamily;
-    font-size: $postBodyFontSize;
-    font-weight: $postBodyFontWeight;
+    min-height: calc(100% - #{$navbarHeight});
 }
 
 @media screen and (min-width: $desktopMinWidth) {
@@ -16,8 +13,12 @@
 }
 
 .post {
+    font-family: $postBodyFontFamily;
+    font-size: $postBodyFontSize;
+    font-weight: $postBodyFontWeight;
     .title {
         display: inline-block;
+        width: 100%;
         font-family: $postTitleFontFamily;
         font-size: $postTitleFontSize;
         font-weight: $postTitleFontWeight;
@@ -25,34 +26,42 @@
         text-transform: capitalize;
         padding: 12px 0;
         text-decoration: none;
-        &:hover {
-            color: #1f68b3;
-        }
     }
 
-    .preview {
-        padding-bottom: 8px;
+    a.title:hover {
+        color: #1f68b3;
     }
-    
+
     .category__tag {
         display: flex;
         color: $lightGrey;
         font-size: 12px;
         padding-top: 4px;
-        padding-bottom: 14px;
-        .categories, .tags {
-            flex: 1;
-        }
+
         span {
+            display: inline-block;
             padding: 5px;
             color: $primaryWhite;
         }
-        .category {
+        .categories, .tags {
+            flex: 1;
+        }
+
+        .category, .tag {
+            background-color: #696969;
+        }
+        
+        .category:hover {
+            cursor: pointer;
             background-color: #ea9a06;
         }
-        .tag {
+
+        .tag:hover {
+            cursor: pointer;
             background-color: #1e88e5;
         }
+
+        
     }
 
     .meta-info {
@@ -65,5 +74,12 @@
             border-top: 1px solid rgba(0, 0, 0, 0.1);
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
+    }
+}
+
+@media screen and (min-width: $desktopMinWidth) {
+    .post {
+        max-width: $desktopMinWidth;
+        margin: auto;
     }
 }

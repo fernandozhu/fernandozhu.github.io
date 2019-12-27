@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+
+<div class="post">
+    <div class="title">
+        {{ page.title }}
+    </div>
+
+    <div class="category__tag">
+
+        {% if page.categories.size > 0 %}
+        <div class="categories">
+            Categories:
+            {% for category in page.categories %}
+            <span class="category">{{ category }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.tags.size > 0 %}
+        <div class="tags">
+            Tags:
+            {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    {{ content }}
+</div>
