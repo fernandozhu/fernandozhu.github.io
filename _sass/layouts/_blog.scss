@@ -11,15 +11,23 @@
     }
 }
 
+@media screen and (min-width: $tabletMinWidth) {
+    .post {
+        width: 85%;
+        margin: auto;
+    }
+}
+
+
 @media screen and (min-width: $desktopMinWidth) {
-    .posts {
+    .post {
         max-width: $desktopMinWidth;
         margin: auto;
     }
 }
 
 .post {
-    width: 80%;
+    width: 85%;
     margin: auto;
     font-family: $postBodyFontFamily;
     font-size: $postBodyFontSize;
@@ -85,16 +93,3 @@
     }
 }
 
-@media screen and (min-width: $tabletMinWidth) {
-    .post {
-        width: 85%;
-        margin: auto;
-    }
-}
-
-@media screen and (min-width: $desktopMinWidth) {
-    .post {
-        max-width: $desktopMinWidth;
-        margin: auto;
-    }
-}
