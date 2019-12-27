@@ -31,20 +31,20 @@
     }
 
     .preview {
-        padding-bottom: 5px;
+        padding-bottom: 8px;
     }
     
     .category__tag {
         display: flex;
         color: $lightGrey;
         font-size: 12px;
-        padding-bottom: 10px;
+        padding-top: 4px;
+        padding-bottom: 14px;
         .categories, .tags {
             flex: 1;
         }
         span {
             padding: 5px;
-            border-radius: 5px;
             color: $primaryWhite;
         }
         .category {
