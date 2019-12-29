@@ -2,24 +2,18 @@
 layout: default
 title: Blog
 ---
-
 <div class="posts">
-
     {% for post in paginator.posts %}
     <div class="post">
-        <a href={{ post.url }} class="title">
-            {{ post.title }}
-        </a>
+        <a href={{ post.url }} class="title">{{ post.title }}</a>
         <div class="category__tag">
             {% if post.categories.size > 0 %}
             <div class="categories">
-                Categories:
-                {% for category in post.categories %}
+                Categories: {% for category in post.categories %}
                 <span class="category">{{ category }}</span>
                 {% endfor %}
             </div>
             {% endif %}
-
             {% if post.tags.size > 0 %}
             <div class="tags">
                 Tags:
@@ -38,17 +32,13 @@ title: Blog
         </div>
     </div>
     {% endfor %}
-
     <!-- Pagination -->
     <div class="pagination">
         {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path }}">Previous</a>
         {% else %}
-        <span>Previous</span>
         {% endif %}
-
         Page: {{ paginator.page }} of {{ paginator.total_pages }}
-
         {% if paginator.next_page %}
         <a href="{{ paginator.next_page_path }}">Next</a>
         {% else %}
