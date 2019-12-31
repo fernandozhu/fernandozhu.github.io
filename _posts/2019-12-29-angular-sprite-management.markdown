@@ -3,7 +3,7 @@ layout: post
 title: "Angular Sprite Management"
 date:   2019-12-29 08:18:33 +1300
 author: Fernando
-categories: web 
+categories: Web 
 tags: Angular 
 ---
 
